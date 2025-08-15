@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00bcd4;
+            border-bottom: 3px solid #00bcd4;
+            display: inline-block;
+        }
+        section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Home Section */
+        #home {
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        video, audio {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Work Section List */
+        ul {
+            list-style: none;
+        }
+        ul li {
+            background: #00bcd4;
+            color: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        ul li:hover {
+            background: #0097a7;
+        }
+
+        /* Resume Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #00bcd4;
+            color: white;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        /* Contact Form */
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            background: #00bcd4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background: #0097a7;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="fade-in">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my work, skills, and journey.</p>
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>Hello! My name is [Your Name], a creative and dedicated web developer specializing in modern, responsive websites.</p>
+        <audio controls>
+            <source src="myaudio.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="fade-in">
+        <h2>My Work</h2>
+        <ul>
+            <li>Website for Local Business</li>
+            <li>Personal Blog</li>
+            <li>Online Store Prototype</li>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="fade-in">
+        <h2>Resume</h2>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Position</th>
+                <th>Company</th>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>Web Developer</td>
+                <td>ABC Tech</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>Intern</td>
+                <td>XYZ Solutions</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fade-in">
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
